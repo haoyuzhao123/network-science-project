@@ -160,7 +160,7 @@ class Simulator:
                 e = Edge()
                 e.setNodes(i,j)
                 #set the weights
-                e.setWeight(np.random.random() * 0.9 + 0.1)
+                e.setWeight(np.random.random() * 2 + 1)
                 #e.setWeight(np.random.weibull(0.7))
                 self.graph.addEdge(e)
         a = centertree(self.graph, getweight)
@@ -180,9 +180,9 @@ class Simulator:
                 else:
                     e.lastvalue = 1
                     """
-                #e.lastvalue = np.random.random() * 2 - 1 + e.weight
+                e.lastvalue = np.random.random() * 2 - 1 + e.weight
                 #e.lastvalue = np.random.random() * 6 - 3 + e.weight
-                e.lastvalue = np.random.weibull(3) * e.weight
+                #e.lastvalue = np.random.weibull(3) * e.weight
                 #e.lastvalue = e.weight
                 # set the confidence bound
                 if e.visit != 0:
@@ -207,7 +207,11 @@ class Simulator:
         #for i in range(len(self.bestedges)):
         #    bestval += self.bestedges[i].lastvalue
         actionval = maxdistfromroot(self.graph,idx,action)
-        bestval = maxdistfromroot(self.graph, self.rootidx, self.bestedges)
+        #bestval = maxdistfromroot(self.graph, self.rootidx, self.bestedges)
+        retp = centertree(self.graph, getlastvalue)
+        bestaction = retp[0]
+        bestidx = retp[1]
+        bestval = maxdistfromroot(self.graph,bestidx,bestaction)
         self.actionarmsval.append(actionval)
         self.bestarmsval.append(bestval)
         if (len(self.bestarmsval) % 500 == 0):
@@ -236,6 +240,9 @@ def getweight(e):
 
 def getlowerconfidence(e):
     return e.lowerconfidence
+
+def getlastvalue(e):
+    return e.lastvalue
 
 def maxdistfromroot(g,rootidx,action):
     INF = 100000
@@ -298,5 +305,26 @@ def main():
     plt.plot((cumact - cumvst) / coor)
     plt.show()
 
+def test():
+    g = Graph()
+    n = 10
+    counter = 1
+    g.setNumnodes(n)
+    for i in range(n):
+        for j in range(i+1,n):
+            e = Edge()
+            e.setNodes(i,j)
+            e.setWeight(counter)
+            e.lastvalue = counter
+            counter += 1
+            g.addEdge(e)
+    a = centertree(g,getweight)
+    action = a[0]
+    idx = a[1]
+    print(len(action))
+    print(maxdistfromroot(g,idx,action))
+
+
 if __name__ == '__main__':
-    main()
+    #main()
+    test()
