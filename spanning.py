@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 class Edge:
     def __init__(self):
-        self.INF = -100
+        self.INF = 100
         self.weight = 0
         self.nodein = -1
         self.nodeout = -1
@@ -58,10 +58,13 @@ class Graph:
 
     def setNumnodes(self, n):
         self.numnodes = n
-        self.adjlist = [[]] * n
+        self.adjlist = []
+        for i in range(n):
+            self.adjlist.append([])
     
     def addEdge(self, e):
         nout = e.nodeout
+        #print(nout)
         self.adjlist[nout].append(e)
 
 def getweight(e):
@@ -110,10 +113,14 @@ class Simulator:
                 e = Edge()
                 e.setNodes(i,j)
                 #set the weights
-                #e.setWeight(np.random.random() * 0.9 + 0.1)
-                e.setWeight(np.random.weibull(0.7))
+                e.setWeight(np.random.random() * 0.9 + 0.1)
+                #e.setWeight(np.random.weibull(0.7))
                 self.graph.addEdge(e)
+                #for i in range(self.numnodes):
+                #    print(len(self.graph.adjlist[i]))
         self.bestedges = kruskal(self.graph, getweight)
+        #for i in range(self.numnodes):
+            #print(len(self.graph.adjlist[i]))
 
     def presimu(self):
         for i in range(self.numnodes):
@@ -129,7 +136,8 @@ class Simulator:
                     e.lastvalue = 1
                     """
                 #e.lastvalue = np.random.random() * 20 - 10 + e.weight
-                e.lastvalue = np.random.weibull(0.6) * e.weight
+                e.lastvalue = np.random.random() * 1 - 0.5 + e.weight
+                #e.lastvalue = np.random.weibull(0.6) * e.weight
                 #e.lastvalue = e.weight
                 # set the confidence bound
                 if e.visit != 0:
@@ -162,12 +170,17 @@ class Simulator:
         for i in range(self.runningtime):
             self.presimu()
             self.postsimu()
+        
+        for i in range(self.numnodes):
+            for j in range(len(self.graph.adjlist[i])):
+                print(self.graph.adjlist[i][j].visit)
+                
 
 
 
 def main():
     s = Simulator()
-    t = 5000
+    t = 3000
     s.setup(10,t)
     """
     print(s.graph.numnodes)
