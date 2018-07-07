@@ -173,7 +173,16 @@
         \[d' = \text{dist}(u,u') \le \text{dist}(u,v) + \text{dist}(v,u') \le d + d = 2d.\]
     \end{proof}
 
+    Now given the theorem, we know that if we can find the center of the graph and then figure out the shortest path tree rooted at the center, then the solution is a good approximation of the optimal solution, and the number of edges is minimized.\\
+
+    Now the only problem is how to find the center and the shortest path tree. First we call the `All Pair Shortest Path' algorithm to find the shortest distance between every $2$ nodes, and we denote the distance matrix $D$, such that $d_{ij} = \text{dist}(v_i,v_j)$. Then we find $c = \arg\min_{i}\max_j d_{ij}$, then $c$ is the center of the graph. At last we call the shortest path algorithm to find the shortest path tree rooted at $c$.\\
+
+    We know that `All Pair Shortest Path' problem can be solved in $O(n^3)$ by the Floyd algorithm, and the shortest path tree can be found by Dijkstra algorithm, and the total running time is $O(n^3)$.
+
     \subsubsection{A not so simple case}
+    Now we consider a not so simple case, which we have the assumption that the each random variable is a constant but we do not know the constant. Then 
+
+    \subsubsection{Another not so simple case}
 
     \subsubsection{The general case}
 

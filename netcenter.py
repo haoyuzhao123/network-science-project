@@ -160,8 +160,8 @@ class Simulator:
                 e = Edge()
                 e.setNodes(i,j)
                 #set the weights
-                #e.setWeight(np.random.random() * 2 + 5)
-                e.setWeight(np.random.weibull(0.7) + 10)
+                e.setWeight(np.random.random() * 4 + 1)
+                #e.setWeight(np.random.weibull(0.7) + 10)
                 self.graph.addEdge(e)
         a = centertree(self.graph, getweight)
         self.bestedges = a[0]
@@ -283,8 +283,8 @@ def dfs(edges, isVisit,cur):
 
 def main():
     s = Simulator()
-    t = 10000
-    s.setup(10,t)
+    t = 1000
+    s.setup(30,t)
     """
     print(s.graph.numnodes)
     print(len(s.bestedges))
