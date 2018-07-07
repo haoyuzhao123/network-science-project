@@ -73,15 +73,86 @@
     \end{abstract}
 
     \section{Introduction}
-    \subsection{Basic Settings and Problem Formulation}
+    \subsection{Introduction to the Problem}
 
     \subsection{Related Works}
 
-    \section{Minimum Spanning Tree}
+    \subsection{Basic Settings and Problem Formulation}
 
-    \section{1 Center of the Graph}
+    \subsection{Hardness of the Problem}
+
+    \section{Methods to Solve the Problem}
+    \subsection{General Methods}
+    To tackle the problem of the unknown distribution of the edges, we apply the framework in multi-arm bandit. However, in the network information syncronization setting, the number of possible result will be exponentially large with respect to the number of nodes. Fortunately, \cite{chen2013combinatorial} gave a framework of combinatorial multi-armed bandit to deal with the problem of exponentially number of `arms'. We apply the framework, and the algorithm in that framework, and combine it with the network information synchronization problem. The algorithm is shown in \textbf{Algorithm \ref{cucb}}
+
+    \begin{algorithm}
+        \caption{Algorithm to solve the online information syncronization problem}
+        \label{cucb}
+        \begin{algorithmic}[1]
+        \Require The graph structure(without weight) $G(V,E)$, and the algorithm $\mathcal A$ we want to run online.
+        \Ensure The action of each round
+        \Procedure{Alg}{$G(V,E),\mathcal A$}
+            \State $\hat \mu_i \leftarrow$ the empirical expectation of edge $i$.
+            \State $T_i \leftarrow$ the number of time the edge $i$ is used.
+            \State Every time we use an edge $i$, we will update the empirical expectation $\hat \mu_i$ and the counter $T_i$.
+            \For{$t = 1,2,\dots,|E|$}
+                \State Play an instance from all possible instances which contains the egde $i$.
+            \EndFor
+            \For{$t=|E|+1,\dots$}
+                \State $\bar\mu_i \leftarrow \hat\mu_i - \sqrt{\frac{3\ln t}{2T_i}}$.
+                \State Play an instance which minimize the result of algorithm $\mathcal A$ when each edge has weight $\bar\mu_i$.
+            \EndFor
+        \EndProcedure
+        \end{algorithmic}
+    \end{algorithm}
+
+    \subsection{Minimize the Total Cost}
+    In this section, we consider the setting when we want to minimize the cost of information synchronization in the network. Now suppose that the random variable $X_i$ on edge $i$ represents the cost of select edge $i$. In this setting, we just consider the total cost but not consider the other measurements. This setting is reasonable in many real life cases when the information synchronization does not have constraints on time but the cost of communication is large. We have the following simple theorem under this setting, and we assume that the random variables that represent the cost on each edge are positive.\\
+
+    \begin{thm}\label{min-spanning-tree}
+        Under the senerio of minimizing the total cost while synchronizing the information, the edges that are chosen by the optimal strategy will form a spanning tree.
+    \end{thm}
+    \begin{proof}
+        This theorem is really simple. First because we want to synchronize the information for all nodes, the chosen edges will let all of the nodes to be connected. Then because all of the edges have positive cost, then if there is a cycle it must be non-optimal. So the optimal strategy will choose a spanning tree of the graph.
+    \end{proof}
+
+    Now it is obvious that the best strategy tries to find the minimum expectation cost spanning tree, which is the spanning tree that minimize the total cost in the long term. We have the following algorithm, see \textbf{Algorithm \ref{cucbmintree}}, which follows the framework \textbf{Algorithm \ref{cucb}}.
+
+    \begin{algorithm}
+        \caption{Algorithm to solve the online information syncronization problem}
+        \label{cucbmintree}
+        \begin{algorithmic}[1]
+        \Require The graph structure(without weight) $G(V,E)$, and the algorithm $\mathcal A$ we want to run online.
+        \Ensure The action of each round
+        \Procedure{Alg}{$G(V,E),\mathcal A$}
+            \State $\hat \mu_i \leftarrow$ the empirical expectation of edge $i$.
+            \State $T_i \leftarrow$ the number of time the edge $i$ is used.
+            \State Every time we use an edge $i$, we will update the empirical expectation $\hat \mu_i$ and the counter $T_i$.
+            \For{$t = 1,2,\dots,|E|$}
+                \State Find an arbitrary spanning tree that contains edge $t$.
+            \EndFor
+            \For{$t=|E|+1,\dots$}
+                \State $\bar\mu_i \leftarrow \hat\mu_i - \sqrt{\frac{3\ln t}{2T_i}}$.
+                \State Find the minimum spanning tree with $\bar\mu_i$ as the weight on edge $i$.
+            \EndFor
+        \EndProcedure
+        \end{algorithmic}
+    \end{algorithm}
+
+    \subsection{Minimize the Maximum Distance}
+    In this subsection, we consider the case when we want to minimize the time when we synchronize all the information. Here we assume that the weight of each edge $e = (u,v)$ represent the time that information goes from $u$ to $v$ or $v$ to $u$.
+
+    \section{Simulation}
+    \subsection{Minimize the Total Cost}
+
+    \subsection{Minimize the Maximum Distance}
+
+    \subsection{Analysis and Further Discussion}
 
     \section{Conclusion}
+
+    \bibliographystyle{ieeetr}
+    \bibliography{mybib}
 
     
     \end{document}
