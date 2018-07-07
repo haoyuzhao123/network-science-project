@@ -80,6 +80,9 @@
     \subsection{Basic Settings and Problem Formulation}
 
     \subsection{Hardness of the Problem}
+    \subsubsection{Exploration vs. Exploitation}
+
+    \subsubsection{Exponential Number of Arms}
 
     \section{Methods to Solve the Problem}
     \subsection{General Methods}
@@ -107,7 +110,7 @@
     \end{algorithm}
 
     \subsection{Minimize the Total Cost}
-    In this section, we consider the setting when we want to minimize the cost of information synchronization in the network. Now suppose that the random variable $X_i$ on edge $i$ represents the cost of select edge $i$. In this setting, we just consider the total cost but not consider the other measurements. This setting is reasonable in many real life cases when the information synchronization does not have constraints on time but the cost of communication is large. We have the following simple theorem under this setting, and we assume that the random variables that represent the cost on each edge are positive.\\
+    In this section, we consider the setting when we want to minimize the cost of information synchronization in the network. Now suppose that the random variable $X_i$ on edge $i$ represents the cost of select edge $i$. In this setting, we just consider the total cost but not consider the other measurements. This setting is reasonable in many real life cases when the information synchronization does not have constraints on time but the cost of communication is large, especially when the information synchronization does not happen so often and the cost of synchronization is high. We have the following simple theorem under this setting, and we assume that the random variables that represent the cost on each edge are positive.\\
 
     \begin{thm}\label{min-spanning-tree}
         Under the senerio of minimizing the total cost while synchronizing the information, the edges that are chosen by the optimal strategy will form a spanning tree.
@@ -119,12 +122,12 @@
     Now it is obvious that the best strategy tries to find the minimum expectation cost spanning tree, which is the spanning tree that minimize the total cost in the long term. We have the following algorithm, see \textbf{Algorithm \ref{cucbmintree}}, which follows the framework \textbf{Algorithm \ref{cucb}}.
 
     \begin{algorithm}
-        \caption{Algorithm to solve the online information syncronization problem}
+        \caption{Algorithm to solve the problem under the min cost setting}
         \label{cucbmintree}
         \begin{algorithmic}[1]
-        \Require The graph structure(without weight) $G(V,E)$, and the algorithm $\mathcal A$ we want to run online.
-        \Ensure The action of each round
-        \Procedure{Alg}{$G(V,E),\mathcal A$}
+        \Require The graph structure(without weight) $G(V,E)$.
+        \Ensure The action of each round, where the edge selected in each round forms a spanning tree of all the nodes and then the algorithm tries to find the minimize the long term total cost of the spanning tree.
+        \Procedure{Alg}{$G(V,E)$}
             \State $\hat \mu_i \leftarrow$ the empirical expectation of edge $i$.
             \State $T_i \leftarrow$ the number of time the edge $i$ is used.
             \State Every time we use an edge $i$, we will update the empirical expectation $\hat \mu_i$ and the counter $T_i$.
@@ -139,8 +142,40 @@
         \end{algorithmic}
     \end{algorithm}
 
+    Now the only problem is how to find the minimum spanning tree of a graph. The problem is simple and we can use Kruskal's algorithm. Then given a spanning tree of the graph, we can transfer the information through the edges of the tree and we can synchronize the infromation.
+
     \subsection{Minimize the Maximum Distance}
     In this subsection, we consider the case when we want to minimize the time when we synchronize all the information. Here we assume that the weight of each edge $e = (u,v)$ represent the time that information goes from $u$ to $v$ or $v$ to $u$.
+
+    \subsubsection{A very simple case}
+    Now we start from a simple case of our problem, we add an assumption about our problem.\\
+    
+    \textbf{Assumption 1:} The cost of each edge is a constant, and we know the constant.\\
+    
+    Under this setting, the fastest way to complete the information synchronization is that $\forall u,v\in V$, $u$ send the information to $v$ through the shortest path between $u,v$ and $v$ send the information to $u$ along the shortest path from $v$ to $u$. However, finding the union of the shortest path of all pair of points usually has $O(n^2)$ edges, and it is very wasting if every edge just transfer little information.\\
+
+    Here we use another method to transfer the information, and we need the following definition.
+
+    \begin{defn}\label{center}
+        (Center) Given a graph $G(V,E)$, we call a vertex $v\in V$ the center of graph $G$, such that
+        \[v = \arg\min_{u\in V}\{\max_{u'\in V}\text{dist}(u,u')\},\]
+        where $\text{dist}(u,u')$ denotes the shortest distance from $u$ to $u'$.
+    \end{defn}
+
+    Now given $G(V,E)$, denote $v\in V$ as the center of graph $G$, then denote $T$ as the shortest path tree rooted at $v$. The shortest path tree only has $|V|-1$ edges so it is really saving when we no not have so much cost. Moreover, we have the following theorem which shows that given the center and the shortest path tree rooted at the center, the strategy is not so bad.
+
+    \begin{thm}
+        If $v\in V$ is the center of graph $G(V,E)$ and $T$ is the shortest path tree of $G$ rooted at $v$, then consider the following strategy, all of the node transfer it's own information to $v$ through tree $T$, and after collecting all the information, the node $v$ transfer all of the information to each nodes. Then this strategy is a $2$ approximation with respect to the time, i.e. it cost at most twice the time of the optimal strategy.
+    \end{thm}
+
+    \begin{proof}
+        The proof is really simple. Denote $d = \min_{u\in V}\{\max_{u'\in V}\text{dist}(u,u')\}$, which is the maximum distance from the center $v$ to any other nodes. Then denote $d' = \max_{u,u'}\text{dist}(u,u')$, there $\text{dist}$ denote the shortest path length between $u,u'$. Then we know that $d$ is the time required by our strategy, and $d'$ is the time required by the optimal strategy. Then we have
+        \[d' = \text{dist}(u,u') \le \text{dist}(u,v) + \text{dist}(v,u') \le d + d = 2d.\]
+    \end{proof}
+
+    \subsubsection{A not so simple case}
+
+    \subsubsection{The general case}
 
     \section{Simulation}
     \subsection{Minimize the Total Cost}
@@ -151,6 +186,7 @@
 
     \section{Conclusion}
 
+    \newpage
     \bibliographystyle{ieeetr}
     \bibliography{mybib}
 
