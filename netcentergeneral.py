@@ -304,10 +304,17 @@ def main():
     plt.plot(cumact - cumvst)
     plt.legend(['Cumulative Cost','Cumulative Best Action Cost',\
             'Regret'],loc='upper left')
+    plt.xlabel('Rounds')
+    plt.ylabel('Costs')
+    plt.title('Costs and Regret')
     plt.show()
     temp = list(range(t))
     coor = np.array(temp) + 1
     plt.plot((cumact - cumvst) / coor)
+    plt.legend('Mean Regret')
+    plt.title('Mean Regret')
+    plt.xlabel('Rounds')
+    plt.ylabel('Cost')
     plt.show()
 
 def test():
