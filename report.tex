@@ -219,10 +219,94 @@
     \section{Simulation}
     \subsection{Minimize the Total Cost}
 
+    We test the result of our method on a complete graph with 20 nodes. We first test the situation when the weight random variable of each edge is a uniform random variable. We plot the total cost of our action, the best action, and the difference between them. The best action is the action that is optimal is the long term, i.e.$\mathbb E[\sum_{e\in T}x_e]$ is minimized. We also plot the average difference, as shown is \textbf{Figure \ref{spanning-uni}}. We also simulate the case when the random variable of weight on each edge is $m_i\cdot x_i$ where $m_i,x_i$ are standard Weibull distribution with shape parameter $0.8$, and the results are shown in \textbf{Figure \ref{spanning-weibull08}}.
+
+    \begin{figure}[htbp!]
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{spanning-cost-regret-uni.png}
+        \end{minipage}
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{spanning-mean-regret-uni.png}
+        \end{minipage}
+        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is a uniform random variable with support $[m_i-3,m_i+3]$, where $m_i$ is chosen uniformly from $[1,3]$. The left figure shows the cost of the best action, our action, and the difference between them(regret). The right figure shows the average regret through time.}
+        \label{spanning-uni}
+    \end{figure}
+
+    \begin{figure}[htbp!]
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{spanning-cost-regret-weibull08.png}
+        \end{minipage}
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{spanning-mean-regret-weibull08.png}
+        \end{minipage}
+        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is random variable $m_i \cdot x_i$, where $m_i,x_i$ are standard Weibull distrubution with parameter $0.8$. The left figure and the right figure shows the same things as in the previous figure.}
+        \label{spanning-weibull08}
+    \end{figure}
+
     \subsection{Minimize the Maximum Distance}
     \subsubsection{The case when the time is constant but unknown}
 
+    We test the result of our method on a complete graph with 20 nodes. We test the situation when the weight random variable of each edge is a uniform random variable, and the results are shown in \textbf{Figure \ref{center-uni}}. We also simulate the case when the random variable of weight on each edge is $m_i\cdot x_i$ where $m_i,x_i$ are standard Weibull distribution with shape parameter $2$ and $0.7$, and the results are shown in \textbf{Figure \ref{center-weibull2},Figure \ref{center-weibull07}}.
+
+    \begin{figure}[htbp!]
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{simple-cost-regret-uni.png}
+        \end{minipage}
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{simple-mean-regret-uni.png}
+        \end{minipage}
+        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is a constant $m_i$, which is chosen uniformly from $[1,5]$. The left figure and the right figure shows the same things as in the previous figure.}
+        \label{center-uni}
+    \end{figure}
+
+    \begin{figure}[htbp!]
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{simple-cost-regret-weibull2.png}
+        \end{minipage}
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{simple-mean-regret-weibull2.png}
+        \end{minipage}
+        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is random variable $m_i \cdot x_i$, where $m_i,x_i$ are standard Weibull distrubution with parameter $2$. The left figure and the right figure shows the same things as in the previous figure.}
+        \label{center-weibull2}
+    \end{figure}
+
+    \begin{figure}[htbp!]
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{simple-cost-regret-weibull07.png}
+        \end{minipage}
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{simple-mean-regret-weibull07.png}
+        \end{minipage}
+        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is random variable $m_i \cdot x_i$, where $m_i,x_i$ are standard Weibull distrubution with parameter $0.7$. The left figure and the right figure shows the same things as in the previous figure.}
+        \label{center-weibull07}
+    \end{figure}
+
     \subsubsection{The general case}
+
+    We test our algorithm on the general case. Because our algoithm just find the best solution in the long term approximately, so it is not reasonble to test the difference between our action and the approximate solution. Here we test on the `cheated' best action, which knows the exact value of the random variables in each round and find the best solution on each round. The test results are shown in \textbf{Figure \ref{general-uni}}.
+
+    \begin{figure}[htbp!]
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{general-cost-regret-uni.png}
+        \end{minipage}
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{general-mean-regret-uni.png}
+        \end{minipage}
+        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is a uniform random variable with support $[m_i-3,m_i+3]$, where $m_i$ is chosen uniformly from $[4,8]$. The left figure shows the cost of the best action which `cheats' by find the best action each round, our action, and the difference between them. The right figure shows the average differnece through time.}
+        \label{general-uni}
+    \end{figure}
 
     \subsection{Analysis and Further Discussion}
 

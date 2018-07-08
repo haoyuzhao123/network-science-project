@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.6.24)  8 JUL 2018 00:55
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.6.24)  8 JUL 2018 15:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -906,14 +906,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--211
 
  []
 
-[3] [4] (./report.bbl) [5] (./report.aux) ) 
+[3]
+File: spanning-cost-regret-uni.png Graphic file (type bmp)
+<spanning-cost-regret-uni.png>
+File: spanning-mean-regret-uni.png Graphic file (type bmp)
+<spanning-mean-regret-uni.png>
+
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 225--233
+[]$[]$ $[]$ 
+ []
+
+File: spanning-cost-regret-weibull08.png Graphic file (type bmp)
+<spanning-cost-regret-weibull08.png>
+File: spanning-mean-regret-weibull08.png Graphic file (type bmp)
+<spanning-mean-regret-weibull08.png>
+
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 238--246
+[]$[]$ $[]$ 
+ []
+
+[4] [5]
+File: simple-cost-regret-uni.png Graphic file (type bmp)
+<simple-cost-regret-uni.png>
+File: simple-mean-regret-uni.png Graphic file (type bmp)
+<simple-mean-regret-uni.png>
+
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 256--264
+[]$[]$ $[]$ 
+ []
+
+File: simple-cost-regret-weibull2.png Graphic file (type bmp)
+<simple-cost-regret-weibull2.png>
+File: simple-mean-regret-weibull2.png Graphic file (type bmp)
+<simple-mean-regret-weibull2.png>
+
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 269--277
+[]$[]$ $[]$ 
+ []
+
+File: simple-cost-regret-weibull07.png Graphic file (type bmp)
+<simple-cost-regret-weibull07.png>
+File: simple-mean-regret-weibull07.png Graphic file (type bmp)
+<simple-mean-regret-weibull07.png>
+
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 282--290
+[]$[]$ $[]$ 
+ []
+
+File: general-cost-regret-uni.png Graphic file (type bmp)
+<general-cost-regret-uni.png>
+File: general-mean-regret-uni.png Graphic file (type bmp)
+<general-mean-regret-uni.png>
+
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 299--307
+[]$[]$ $[]$ 
+ []
+
+[6] [7] [8] (./report.bbl) [9] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 22422 strings out of 492969
- 438368 string characters out of 6137283
- 463187 words of memory out of 5000000
- 26130 multiletter control sequences out of 15000+600000
+ 22479 strings out of 492969
+ 440064 string characters out of 6137283
+ 463236 words of memory out of 5000000
+ 26173 multiletter control sequences out of 15000+600000
  538810 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,6n,54p,827b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.pdf (5 pages).
+Output written on report.pdf (9 pages).

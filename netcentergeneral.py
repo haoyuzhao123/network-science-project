@@ -165,8 +165,8 @@ class Simulator:
                 e = Edge()
                 e.setNodes(i,j)
                 #set the weights
-                #e.setWeight(np.random.random() * 4 + 4)
-                e.setWeight(np.random.weibull(0.7) + 4)
+                e.setWeight(np.random.random() * 4 + 4)
+                #e.setWeight(np.random.weibull(0.7) + 4)
                 self.graph.addEdge(e)
         a = centertree(self.graph, getweight)
         self.bestedges = a[0]
