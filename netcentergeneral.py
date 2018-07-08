@@ -96,7 +96,12 @@ def centertree(g, fn):
     for i in range(len(distmat)):
         maxdist.append(findMax(distmat[i])[0])
     rootidx = findMin(maxdist)[1]
-    mat = [[INF] * n] * n
+    mat = []
+    for i in range(n):
+        mat.append([])
+    for i in range(n):
+        for j in range(n):
+            mat[i].append(INF)
     for i in range(n):
         for j in range(len(g.adjlist[i])):
             u = g.adjlist[i][j].nodein
@@ -160,8 +165,8 @@ class Simulator:
                 e = Edge()
                 e.setNodes(i,j)
                 #set the weights
-                e.setWeight(np.random.random() * 2 + 5)
-                #e.setWeight(np.random.weibull(0.7) + 10)
+                #e.setWeight(np.random.random() * 4 + 4)
+                e.setWeight(np.random.weibull(0.7) + 4)
                 self.graph.addEdge(e)
         a = centertree(self.graph, getweight)
         self.bestedges = a[0]
@@ -283,8 +288,8 @@ def dfs(edges, isVisit,cur):
 
 def main():
     s = Simulator()
-    t = 10000
-    s.setup(10,t)
+    t = 3000
+    s.setup(15,t)
     """
     print(s.graph.numnodes)
     print(len(s.bestedges))

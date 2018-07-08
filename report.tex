@@ -126,7 +126,7 @@
         \label{cucbmintree}
         \begin{algorithmic}[1]
         \Require The graph structure(without weight) $G(V,E)$.
-        \Ensure The action of each round, where the edge selected in each round forms a spanning tree of all the nodes and then the algorithm tries to find the minimize the long term total cost of the spanning tree.
+        \Ensure The action of each round, where the edge selected in each round forms a spanning tree of all the nodes and then the algorithm tries to minimize the long term total cost of the spanning tree.
         \Procedure{Alg}{$G(V,E)$}
             \State $\hat \mu_i \leftarrow$ the empirical expectation of edge $i$.
             \State $T_i \leftarrow$ the number of time the edge $i$ is used.
@@ -180,16 +180,49 @@
     We know that `All Pair Shortest Path' problem can be solved in $O(n^3)$ by the Floyd algorithm, and the shortest path tree can be found by Dijkstra algorithm, and the total running time is $O(n^3)$.
 
     \subsubsection{A not so simple case}
-    Now we consider a not so simple case, which we have the assumption that the each random variable is a constant but we do not know the constant. Then 
+    Now we consider a not so simple case, which we have the assumption that the each random variable is a constant but we do not know the constant. Then our solution is to call the algorithm framework (\textbf{Algorithm \ref{cucb}}), and turned it into the online version, see \textbf{Algorithm \ref{cucbcentertree}}.
+
+    \begin{algorithm}
+        \caption{Algorithm to solve the problem under the min time setting}
+        \label{cucbcentertree}
+        \begin{algorithmic}[1]
+        \Require The graph structure(without weight) $G(V,E)$.
+        \Ensure The action of each round, where the edge selected in each round forms a spanning tree of all the nodes and then the algorithm tries to find the minimize the information transfer time in the long term.
+        \Procedure{Alg}{$G(V,E)$}
+            \State $\hat \mu_i \leftarrow$ the empirical expectation of edge $i$.
+            \State $T_i \leftarrow$ the number of time the edge $i$ is used.
+            \State Every time we use an edge $i$, we will update the empirical expectation $\hat \mu_i$ and the counter $T_i$.
+            \For{$t = 1,2,\dots,|E|$}
+                \State Find an arbitrary spanning tree that contains edge $t$.
+            \EndFor
+            \For{$t=|E|+1,\dots$}
+                \State $\bar\mu_i \leftarrow \hat\mu_i - \sqrt{\frac{3\ln t}{2T_i}}$.
+                \State Find the center of the graph $G$ and the corresponding shortest path tree rooted at the center with $\bar\mu_i$ as the weight on edge $i$.
+            \EndFor
+        \EndProcedure
+        \end{algorithmic}
+    \end{algorithm}
+
 
     \subsubsection{Another not so simple case}
+    Now we consider the case that the distribution of each random variable on the edge is known. Similar as the previous discussion, we also want to find a `center' of the graph and a spanning tree rooted at the center, such that the spanning tree minimize the largest distance from the center we choose. Formally, we want to find a spanning tree $T$ rooted at $v$ such that
+    \[\mathbb E[\max_{u,T}\text{dist}(v,u)],\]
+    is minimized, where the distance function $\text{dist}$ denote the shortest path from $v$ to $u$ on the tree $T$.\\
+
+    Note that computing the exact spanning tree that minimize the objective function may be difficult, and we try an approximate solution. We compute the mean weight of each edge and we find the center and the corresponding shortest path tree rooted at the center with respect to the mean of each weight. Our solution is approximate because of the following fact of the objective functions,
+    \[\mathbb E[\max_{u,T}\text{dist}(v,u)] \ge \max_{u,T}\mathbb E[\text{dist}(v,u)],\]
+    since the max function is convex. Then the algorithm is the same as the most simple case, given the mean of each edge.
 
     \subsubsection{The general case}
+    Then in the general case, we do not know the distribution of the random variables. We also use the approximate solution as shown in the previous case. Then combined with the online settings, we can thus reuse the algorithm when the random variables are constants, see \textbf{Algorithm \ref{cucbcentertree}}.
 
     \section{Simulation}
     \subsection{Minimize the Total Cost}
 
     \subsection{Minimize the Maximum Distance}
+    \subsubsection{The case when the time is constant but unknown}
+
+    \subsubsection{The general case}
 
     \subsection{Analysis and Further Discussion}
 

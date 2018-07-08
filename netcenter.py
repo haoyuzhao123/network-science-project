@@ -96,7 +96,12 @@ def centertree(g, fn):
     for i in range(len(distmat)):
         maxdist.append(findMax(distmat[i])[0])
     rootidx = findMin(maxdist)[1]
-    mat = [[INF] * n] * n
+    mat = []
+    for i in range(n):
+        mat.append([])
+    for i in range(n):
+        for j in range(n):
+            mat[i].append(INF)
     for i in range(n):
         for j in range(len(g.adjlist[i])):
             u = g.adjlist[i][j].nodein
@@ -160,8 +165,8 @@ class Simulator:
                 e = Edge()
                 e.setNodes(i,j)
                 #set the weights
-                e.setWeight(np.random.random() * 4 + 1)
-                #e.setWeight(np.random.weibull(0.7) + 10)
+                #e.setWeight(np.random.random() * 4 + 1)
+                e.setWeight(np.random.weibull(0.7) + 0.1)
                 self.graph.addEdge(e)
         a = centertree(self.graph, getweight)
         self.bestedges = a[0]
@@ -182,7 +187,7 @@ class Simulator:
                     """
                 #e.lastvalue = np.random.random() * 2 - 1 + e.weight
                 #e.lastvalue = np.random.random() * 6 - 3 + e.weight
-                #e.lastvalue = np.random.weibull(3) * e.weight
+                #e.lastvalue = np.random.weibull(0.7) * e.weight
                 e.lastvalue = e.weight
                 # set the confidence bound
                 if e.visit != 0:
@@ -217,6 +222,8 @@ class Simulator:
         if (len(self.bestarmsval) % 500 == 0):
             print(actionval)
             print(bestval)
+            for i in range(len(action)):
+                print('%d - %d: %f', action[i].nodein, action[i].nodeout, action[i].lastvalue)
         if len(self.cumactionarmsval) == 0:
             self.cumactionarmsval.append(actionval)
             self.cumbestarmsval.append(bestval)
@@ -283,8 +290,8 @@ def dfs(edges, isVisit,cur):
 
 def main():
     s = Simulator()
-    t = 1000
-    s.setup(30,t)
+    t = 5000
+    s.setup(20,t)
     """
     print(s.graph.numnodes)
     print(len(s.bestedges))
@@ -299,10 +306,17 @@ def main():
     plt.plot(cumact - cumvst)
     plt.legend(['Cumulative Cost','Cumulative Best Action Cost',\
             'Regret'],loc='upper left')
+    plt.xlabel('Rounds')
+    plt.ylabel('Costs')
+    plt.title('Costs and Regret')
     plt.show()
     temp = list(range(t))
     coor = np.array(temp) + 1
     plt.plot((cumact - cumvst) / coor)
+    plt.legend('Mean Regret')
+    plt.title('Mean Regret')
+    plt.xlabel('Rounds')
+    plt.ylabel('Cost')
     plt.show()
 
 def test():
@@ -316,13 +330,21 @@ def test():
             e.setNodes(i,j)
             e.setWeight(counter)
             e.lastvalue = counter
+            if i == 3 and j == 9:
+                e.lastvalue = 1
+                e.setWeight(1)
             counter += 1
             g.addEdge(e)
     a = centertree(g,getweight)
     action = a[0]
     idx = a[1]
     print(len(action))
+    for i in range(len(action)):
+        print('%d - %d: %f', action[i].nodein, action[i].nodeout, action[i].lastvalue)
     print(maxdistfromroot(g,idx,action))
+
+    mat = apsp(g, getlastvalue)
+    print(mat[0][9])
 
 
 if __name__ == '__main__':
