@@ -37,6 +37,8 @@
     \usepackage{graphicx}
     \usepackage{tikz}
     \usepackage{subfigure}
+
+    \usepackage{natbib}
     
     % In case you need to adjust margins:
     \topmargin=-0.45in      %
@@ -68,22 +70,28 @@
     \begin{document}
     \maketitle
 
-    \begin{abstract}
-
-    \end{abstract}
-
     \section{Introduction}
     \subsection{Introduction to the Problem}
-    In this project, we study a problem that is related to both online decision problem, or more specificly, the multi-armed bandit, and the information synchronization problem.
-
-    \subsection{Related Works}
+    In this project, we study a problem that is related to both online decision problem, or more specificly, the multi-armed bandit, and the information synchronization problem. The problem is useful in the real life, especially in the distrubuted computing and system field. For example, the distributed file storage system may need to synchronize the file data through the communication network, and in a multi-agent setting, each agent needs to transfer the information to coordinate the action. However, usually we do not know the cost of connecting between 2 nodes in a communication network before we actually choose to connect, and moreover, we may not know the distrubution of that cost, so we need to make decision and change our estimation online.
 
     \subsection{Basic Settings and Problem Formulation}
+    In this section, we state our problem and the basic settings formally. Given a graph $G(V,E)$ as a conmunication network, and each node $v\in V$ has it's own information $I_v$. Then we want to synchronize the information in the network, i.e. each node know the information of all other nodes. Each time the information goes from $u$ to $v$, $u$ can transfer all the information to $v$.\\
+
+    Our problem is the online repeated version of this information synchronization problem. We know the graph topology $G(V,E)$, but we do not know the weight of each edge. There is a random variable $X_e$ as the weight of edge $e$ and we do not know the distribution of $X_e$. Assume that we want to synchronize the information in many rounds, and in each round, the weight of each edge will not change. If we choose edge $e$ in round $t$, then we can know the value of $X_e$ in round $t$.\\
+
+    In this project, we focus on 2 different aspect of the problem. The first aspect is that we want to minimize the cost of the information synchronization process. Under this setting, the weight of each edge $e$ in round $t$ is the cost of using this edge in round $t$, which is not affected by the number of times we use this edge to transfer the information in this round and by the amount of information we transfer during one usage of the edge. Formally, let $X_{e,t}$ denote the cost of edge $e$ in round $t$, what we want to do is to select $S_t$ in each round $t$, such that the expectation of the total cost
+    \[\mathbb E\sum_{e\in S_T}X_{e,t},\]
+    with the constraint that the information synchronization can be completed successfully.\\
+
+    The other aspect is that we want to minimize the time of the information synchronization process. Under this setting, the weight of each edge $e$ in round $t$ is the time that information transfer from $1$ endpoint of that edge to another. We also assume that the in each round, the time needed to transfer the information does not change. Formally, let $X_{e,t}$ denote the time needed by edge $e$ in round $t$, what we want to do is to choose a sequence of edges that synchronize the information as fast as possible(allow transfer the information parallel on different edges).
 
     \subsection{Hardness of the Problem}
     \subsubsection{Exploration vs. Exploitation}
 
     \subsubsection{Exponential Number of Arms}
+
+    
+    \subsection{Related Works}
 
     \section{Methods to Solve the Problem}
     \subsection{General Methods}
@@ -111,7 +119,9 @@
     \end{algorithm}
 
     \subsection{Minimize the Total Cost}
-    In this section, we consider the setting when we want to minimize the cost of information synchronization in the network. Now suppose that the random variable $X_i$ on edge $i$ represents the cost of select edge $i$. In this setting, we just consider the total cost but not consider the other measurements. This setting is reasonable in many real life cases when the information synchronization does not have constraints on time but the cost of communication is large, especially when the information synchronization does not happen so often and the cost of synchronization is high. We have the following simple theorem under this setting, and we assume that the random variables that represent the cost on each edge are positive.\\
+    In this section, we consider the setting when we want to minimize the cost of information synchronization in the network. Now suppose that the random variable $X_i$ on edge $i$ represents the cost of select edge $i$. In this setting, we just consider the total cost but not consider the other measurements. To make the model simple, we assume that if we choose an edge, we will pay for the cost of setting up the connection, and the cost is independent of how much information we transfer or how many times we transfer the information.\\
+    
+    This setting is reasonable in many real life cases when the information synchronization does not have constraints on time but the cost of communication is large, especially when the information synchronization does not happen so often and the cost of synchronization is high. We have the following simple theorem under this setting, and we assume that the random variables that represent the cost on each edge are positive.\\
 
     \begin{thm}\label{min-spanning-tree}
         Under the senerio of minimizing the total cost while synchronizing the information, the edges that are chosen by the optimal strategy will form a spanning tree.
@@ -145,13 +155,13 @@
 
     Now the only problem is how to find the minimum spanning tree of a graph. The problem is simple and we can use Kruskal's algorithm. Then given a spanning tree of the graph, we can transfer the information through the edges of the tree and we can synchronize the infromation.
 
-    \subsection{Minimize the Maximum Distance}
+    \subsection{Minimize the Maximum Time}
     In this subsection, we consider the case when we want to minimize the time when we synchronize all the information. Here we assume that the weight of each edge $e = (u,v)$ represent the time that information goes from $u$ to $v$ or $v$ to $u$.
 
     \subsubsection{A very simple case}
     Now we start from a simple case of our problem, we add an assumption about our problem.\\
     
-    \textbf{Assumption 1:} The cost of each edge is a constant, and we know the constant.\\
+    \textbf{Assumption:} The cost of each edge is a constant, and we know the constant.\\
     
     Under this setting, the fastest way to complete the information synchronization is that $\forall u,v\in V$, $u$ send the information to $v$ through the shortest path between $u,v$ and $v$ send the information to $u$ along the shortest path from $v$ to $u$. However, finding the union of the shortest path of all pair of points usually has $O(n^2)$ edges, and it is very wasting if every edge just transfer little information.\\
 
