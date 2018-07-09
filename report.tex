@@ -87,10 +87,14 @@
 
     \subsection{Hardness of the Problem}
     \subsubsection{Exploration vs. Exploitation}
+    How to balance the exploration and exploitation is a general problem in the online learning, and especially the multi-armed bandit field. To get more accurate estimation of each random variable, we should observe that random variable for as more time as possible. However, if we choose the random variable that is `bad' ,i.e. it may cost a lot to choose that variable, we should not observe that random variable. So there is a seemingly contradiction between the exploration and exploitation, and we should balance these 2 aspect.
 
-    \subsubsection{Exponential Number of Arms}
+    \subsubsection{Exponential Number of Feasible Action}
+    Given a graph with $n$ edges, we can have $2^n$ number of possible actions, although some of them violate the constraints. Then just consider the spanning tree of a complete graph, the number of spanning trees is also exponential compared with the number of edges. So given the time horizon of our repeated online information synchronization problem, we may not try each feasible action once.
 
-    
+    \subsubsection{Different Kinds of Measurements}
+    Different kinds of measurements of the information synchronization also lead to a challenge of the problem. Because when we want to optimize the objective function under different measurements, such as cost, time or a combination of them, we will often lead to different algorithm and models. So it may hard to combine different kind of model under a general framework and get theoretical guarantee of the algorithm performance.
+
     \subsection{Related Works}
 
     \section{Methods to Solve the Problem}
@@ -165,7 +169,7 @@
     
     Under this setting, the fastest way to complete the information synchronization is that $\forall u,v\in V$, $u$ send the information to $v$ through the shortest path between $u,v$ and $v$ send the information to $u$ along the shortest path from $v$ to $u$. However, finding the union of the shortest path of all pair of points usually has $O(n^2)$ edges, and it is very wasting if every edge just transfer little information.\\
 
-    Here we use another method to transfer the information, and we need the following definition.
+    Here we use another method to transfer the information, which is an approxiamtion of the theoretical optimal solution, and use the minimum possible number of edges. We need the following definition.
 
     \begin{defn}\label{center}
         (Center) Given a graph $G(V,E)$, we call a vertex $v\in V$ the center of graph $G$, such that

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.6.24)  9 JUL 2018 15:46
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.6.24)  9 JUL 2018 16:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -891,29 +891,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
-
-Package natbib Warning: Citation `chen2013combinatorial' on page 1 undefined on
- input line 98.
-
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
- []
+Package natbib Warning: Citation `chen2013combinatorial' on page 2 undefined on
+ input line 102.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
@@ -923,17 +914,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--167
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 220--222
+Underfull \hbox (badness 10000) in paragraph at lines 224--226
 
  []
 
@@ -942,16 +943,17 @@ File: spanning-cost-regret-uni.png Graphic file (type bmp)
 File: spanning-mean-regret-uni.png Graphic file (type bmp)
 <spanning-mean-regret-uni.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 236--244
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 240--248
 []$[]$ $[]$ 
  []
 
+[5]
 File: spanning-cost-regret-weibull08.png Graphic file (type bmp)
 <spanning-cost-regret-weibull08.png>
 File: spanning-mean-regret-weibull08.png Graphic file (type bmp)
 <spanning-mean-regret-weibull08.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 249--257
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 253--261
 []$[]$ $[]$ 
  []
 
@@ -960,7 +962,7 @@ File: simple-cost-regret-uni.png Graphic file (type bmp)
 File: simple-mean-regret-uni.png Graphic file (type bmp)
 <simple-mean-regret-uni.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 267--275
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 271--279
 []$[]$ $[]$ 
  []
 
@@ -969,7 +971,7 @@ File: simple-cost-regret-weibull2.png Graphic file (type bmp)
 File: simple-mean-regret-weibull2.png Graphic file (type bmp)
 <simple-mean-regret-weibull2.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 280--288
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 284--292
 []$[]$ $[]$ 
  []
 
@@ -978,32 +980,33 @@ File: simple-cost-regret-weibull07.png Graphic file (type bmp)
 File: simple-mean-regret-weibull07.png Graphic file (type bmp)
 <simple-mean-regret-weibull07.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 293--301
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 297--305
 []$[]$ $[]$ 
  []
 
+[6] [7]
 File: general-cost-regret-uni.png Graphic file (type bmp)
 <general-cost-regret-uni.png>
 File: general-mean-regret-uni.png Graphic file (type bmp)
 <general-mean-regret-uni.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 310--318
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 314--322
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
 
  []
 
-[5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 
  []
 
 
 Package natbib Warning: Citation `chen2013combinatorial' on page 8 undefined on
- input line 330.
+ input line 334.
 
 [8] (./report.bbl)
 
@@ -1015,7 +1018,7 @@ Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
 
 
-./report.aux:49: Package natbib Error: Bibliography not compatible with author-
+./report.aux:50: Package natbib Error: Bibliography not compatible with author-
 year citations.
 (natbib)                Press <return> to continue in numerical citation style.
 
@@ -1024,7 +1027,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.49 ...mand\NAT@force@numbers{}\NAT@force@numbers
+l.50 ...mand\NAT@force@numbers{}\NAT@force@numbers
                                                   
 Check the bibliography entries for non-compliant syntax,
 or select author-year BibTeX style, e.g. plainnat
@@ -1033,7 +1036,7 @@ or select author-year BibTeX style, e.g. plainnat
 Here is how much of TeX's memory you used:
  22806 strings out of 492969
  443868 string characters out of 6137283
- 468843 words of memory out of 5000000
+ 467843 words of memory out of 5000000
  26500 multiletter control sequences out of 15000+600000
  538794 words of font info for 64 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
