@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.6.24)  8 JUL 2018 15:40
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.6.24)  9 JUL 2018 12:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -870,68 +870,67 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 69.
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--211
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 [3]
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
+
+ []
+
 File: spanning-cost-regret-uni.png Graphic file (type bmp)
 <spanning-cost-regret-uni.png>
 File: spanning-mean-regret-uni.png Graphic file (type bmp)
 <spanning-mean-regret-uni.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 225--233
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 226--234
 []$[]$ $[]$ 
  []
 
+[4]
 File: spanning-cost-regret-weibull08.png Graphic file (type bmp)
 <spanning-cost-regret-weibull08.png>
 File: spanning-mean-regret-weibull08.png Graphic file (type bmp)
 <spanning-mean-regret-weibull08.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 238--246
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 239--247
 []$[]$ $[]$ 
  []
 
-[4] [5]
 File: simple-cost-regret-uni.png Graphic file (type bmp)
 <simple-cost-regret-uni.png>
 File: simple-mean-regret-uni.png Graphic file (type bmp)
 <simple-mean-regret-uni.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 256--264
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 257--265
 []$[]$ $[]$ 
  []
 
@@ -940,7 +939,7 @@ File: simple-cost-regret-weibull2.png Graphic file (type bmp)
 File: simple-mean-regret-weibull2.png Graphic file (type bmp)
 <simple-mean-regret-weibull2.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 269--277
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 270--278
 []$[]$ $[]$ 
  []
 
@@ -949,27 +948,38 @@ File: simple-cost-regret-weibull07.png Graphic file (type bmp)
 File: simple-mean-regret-weibull07.png Graphic file (type bmp)
 <simple-mean-regret-weibull07.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 282--290
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 283--291
 []$[]$ $[]$ 
  []
 
+[5] [6]
 File: general-cost-regret-uni.png Graphic file (type bmp)
 <general-cost-regret-uni.png>
 File: general-mean-regret-uni.png Graphic file (type bmp)
 <general-mean-regret-uni.png>
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 299--307
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 300--308
 []$[]$ $[]$ 
  []
 
-[6] [7] [8] (./report.bbl) [9] (./report.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
+
+ []
+
+[7] (./report.bbl) [8] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  22479 strings out of 492969
  440064 string characters out of 6137283
- 463236 words of memory out of 5000000
+ 462236 words of memory out of 5000000
  26173 multiletter control sequences out of 15000+600000
  538810 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,6n,54p,827b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.pdf (9 pages).
+Output written on report.pdf (8 pages).

@@ -74,6 +74,7 @@
 
     \section{Introduction}
     \subsection{Introduction to the Problem}
+    In this project, we study a problem that is related to both online decision problem, or more specificly, the multi-armed bandit, and the information synchronization problem.
 
     \subsection{Related Works}
 
@@ -230,7 +231,7 @@
             \centering
             \includegraphics[width=3in]{spanning-mean-regret-uni.png}
         \end{minipage}
-        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is a uniform random variable with support $[m_i-3,m_i+3]$, where $m_i$ is chosen uniformly from $[1,3]$. The left figure shows the cost of the best action, our action, and the difference between them(regret). The right figure shows the average regret through time.}
+        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is a uniform random variable with support $[m_i-3,m_i+3]$, where $m_i$ is chosen uniformly from $[3,5]$. The left figure shows the cost of the best action, our action, and the difference between them(regret). The right figure shows the average regret through time.}
         \label{spanning-uni}
     \end{figure}
 
@@ -309,8 +310,14 @@
     \end{figure}
 
     \subsection{Analysis and Further Discussion}
+    First from the simulation results, we find that the algorithm will converge almost to the best action except for the general case. We think that this is due to the fact that the previous cases only cares about the mean of each edge, which we try to approximate in our algorithm. But in the general case when the solution is not only based on the mean of each random variable but also the distribution of each random variable, our method may not converge to the best action.\\
+    
+    But the simulation results shows that our algorithm may also approximate the `cheating' solution to some constant, which may depend on the graph topology and the distribution of the random variable. Then combine our previous argument that when the information transfer through the shortest path tree rooted at the center, the time is at most $2$ times of the optimal strategy. So we can say that our strategy can solve this general case approximately.\\
+
+    Moreover, we can find that the speed of convergence are differnet. When the distrubution has larger variance or the random variable is long tail, the speed of convergence is slow.
 
     \section{Conclusion}
+    In this report, we study the online information synchronization problem, with known weight of the communication graph. We apply the framework in \cite{chen2013combinatorial} and let it fit our problem settings. We study the problem from $2$ different aspect, one from the minimum cost, and the other from the minimum time spent during the synchronization process. In the minimum cost version, we show that our method can tackle this problem successfully by simulation. However under the minimum time spent setting, our algorithm can successfully solve the problem when the random variables are constant and can only get a approximate solution of the general case.
 
     \newpage
     \bibliographystyle{ieeetr}
