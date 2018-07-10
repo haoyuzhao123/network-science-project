@@ -166,7 +166,7 @@ class Simulator:
                 e.setNodes(i,j)
                 #set the weights
                 #e.setWeight(np.random.random() * 4 + 1)
-                e.setWeight(np.random.weibull(0.7) + 0.1)
+                e.setWeight(np.random.weibull(2) + 0.1)
                 self.graph.addEdge(e)
         a = centertree(self.graph, getweight)
         self.bestedges = a[0]
@@ -191,7 +191,7 @@ class Simulator:
                 e.lastvalue = e.weight
                 # set the confidence bound
                 if e.visit != 0:
-                    e.lowerconfidence = e.empmean - 1 * np.sqrt(3 * np.log(self.counter) / (2 * e.visit))
+                    e.lowerconfidence = e.empmean - e.empmean * np.sqrt(3 * np.log(self.counter) / (2 * e.visit))
                 else:
                     e.lowerconfidence = 0.1
 

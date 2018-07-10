@@ -113,8 +113,8 @@ class Simulator:
                 e = Edge()
                 e.setNodes(i,j)
                 #set the weights
-                e.setWeight(np.random.random() * 2 + 3)
-                #e.setWeight(np.random.weibull(0.8))
+                #e.setWeight(np.random.random() * 2 + 3)
+                e.setWeight(np.random.weibull(0.8))
                 self.graph.addEdge(e)
                 #for i in range(self.numnodes):
                 #    print(len(self.graph.adjlist[i]))
@@ -136,12 +136,12 @@ class Simulator:
                     e.lastvalue = 1
                     """
                 #e.lastvalue = np.random.random() * 20 - 10 + e.weight
-                e.lastvalue = np.random.random() * 6 - 3 + e.weight
-                #e.lastvalue = np.random.weibull(0.8) * e.weight
+                #e.lastvalue = np.random.random() * 6 - 3 + e.weight
+                e.lastvalue = np.random.weibull(0.8) * e.weight
                 #e.lastvalue = e.weight
                 # set the confidence bound
                 if e.visit != 0:
-                    e.lowerconfidence = e.empmean - 1 * np.sqrt(3 * np.log(self.counter) / (2 * e.visit))
+                    e.lowerconfidence = e.empmean - e.empmean * np.sqrt(3 * np.log(self.counter) / (2 * e.visit))
 
     def postsimu(self):
         self.counter += 1

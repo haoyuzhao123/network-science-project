@@ -1,7 +1,65 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{chen2013combinatorial}
-W.~Chen, Y.~Wang, and Y.~Yuan, ``Combinatorial multi-armed bandit: general
-  framework, results and applications,'' 2013.
+\bibitem[Agrawal(1995)]{Agrawal1995}
+Rajeev Agrawal.
+\newblock Sample mean based index policies with o(log n) regret for the
+  multi-armed bandit problem.
+\newblock 27, 12 1995.
+
+\bibitem[Auer et~al.(2002)Auer, Cesa-Bianchi, and
+  Fischer]{Auer:2002:FAM:599614.599677}
+Peter Auer, Nicol\`{o} Cesa-Bianchi, and Paul Fischer.
+\newblock Finite-time analysis of the multiarmed bandit problem.
+\newblock \emph{Mach. Learn.}, 47\penalty0 (2-3):\penalty0 235--256, May 2002.
+\newblock ISSN 0885-6125.
+\newblock \doi{10.1023/A:1013689704352}.
+\newblock URL \url{https://doi.org/10.1023/A:1013689704352}.
+
+\bibitem[Chen et~al.(2014{\natexlab{a}})Chen, Lin, King, Lyu, and
+  Chen]{Chen:2014:CPE:2968826.2968869}
+Shouyuan Chen, Tian Lin, Irwin King, Michael~R. Lyu, and Wei Chen.
+\newblock Combinatorial pure exploration of multi-armed bandits.
+\newblock In \emph{Proceedings of the 27th International Conference on Neural
+  Information Processing Systems - Volume 1}, NIPS'14, pages 379--387,
+  Cambridge, MA, USA, 2014{\natexlab{a}}. MIT Press.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=2968826.2968869}.
+
+\bibitem[Chen et~al.(2013)Chen, Wang, and Yuan]{pmlr-v28-chen13a}
+Wei Chen, Yajun Wang, and Yang Yuan.
+\newblock Combinatorial multi-armed bandit: General framework and applications.
+\newblock In Sanjoy Dasgupta and David McAllester, editors, \emph{Proceedings
+  of the 30th International Conference on Machine Learning}, volume~28 of
+  \emph{Proceedings of Machine Learning Research}, pages 151--159, Atlanta,
+  Georgia, USA, 17--19 Jun 2013. PMLR.
+\newblock URL \url{http://proceedings.mlr.press/v28/chen13a.html}.
+
+\bibitem[Chen et~al.(2014{\natexlab{b}})Chen, Wang, and
+  Yuan]{DBLP:journals/corr/ChenWY14a}
+Wei Chen, Yajun Wang, and Yang Yuan.
+\newblock Combinatorial multi-armed bandit and its extension to
+  probabilistically triggered arms.
+\newblock \emph{CoRR}, abs/1407.8339, 2014{\natexlab{b}}.
+\newblock URL \url{http://arxiv.org/abs/1407.8339}.
+
+\bibitem[Lai and Robbins(1985)]{Lai:1985:AEA:2609660.2609757}
+T.L Lai and Herbert Robbins.
+\newblock Asymptotically efficient adaptive allocation rules.
+\newblock \emph{Adv. Appl. Math.}, 6\penalty0 (1):\penalty0 4--22, March 1985.
+\newblock ISSN 0196-8858.
+\newblock \doi{10.1016/0196-8858(85)90002-8}.
+\newblock URL \url{http://dx.doi.org/10.1016/0196-8858(85)90002-8}.
+
+\bibitem[Thompson(1933)]{Thompson:10.2307/2332286}
+William~R. Thompson.
+\newblock On the likelihood that one unknown probability exceeds another in
+  view of the evidence of two samples.
+\newblock \emph{Biometrika}, 25\penalty0 (3/4):\penalty0 285--294, 1933.
+\newblock ISSN 00063444.
+\newblock URL \url{http://www.jstor.org/stable/2332286}.
 
 \end{thebibliography}

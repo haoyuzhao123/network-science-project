@@ -1,10 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.6.24)  9 JUL 2018 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.24)  9 JUL 2018 20:34
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/zhy/git/network-science-project/report
-(d:/zhy/git/network-science-project/report.tex
+**report
+(./report.tex
 LaTeX2e <2018-04-01> patch level 5
 (c:/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -216,62 +215,65 @@ Package: expl3 2018-06-14 L3 programming layer (code)
 \c__fp_Bigg_leading_shift_int=\count129
 \c__fp_Bigg_middle_shift_int=\count130
 \c__fp_Bigg_trailing_shift_int=\count131
-\g__fp_array_int=\count132
-\l__fp_array_loop_int=\count133
-\l__sort_length_int=\count134
-\l__sort_min_int=\count135
-\l__sort_top_int=\count136
-\l__sort_max_int=\count137
-\l__sort_true_max_int=\count138
-\l__sort_block_int=\count139
-\l__sort_begin_int=\count140
-\l__sort_end_int=\count141
-\l__sort_A_int=\count142
-\l__sort_B_int=\count143
-\l__sort_C_int=\count144
-\l__tl_analysis_normal_int=\count145
-\l__tl_analysis_index_int=\count146
-\l__tl_analysis_nesting_int=\count147
-\l__tl_analysis_type_int=\count148
-\l__regex_internal_a_int=\count149
-\l__regex_internal_b_int=\count150
-\l__regex_internal_c_int=\count151
-\l__regex_balance_int=\count152
-\l__regex_group_level_int=\count153
-\l__regex_mode_int=\count154
-\c__regex_cs_in_class_mode_int=\count155
-\c__regex_cs_mode_int=\count156
-\l__regex_catcodes_int=\count157
-\l__regex_default_catcodes_int=\count158
-\c__regex_catcode_L_int=\count159
-\c__regex_catcode_O_int=\count160
-\c__regex_catcode_A_int=\count161
-\c__regex_all_catcodes_int=\count162
-\l__regex_show_lines_int=\count163
-\l__regex_min_state_int=\count164
-\l__regex_max_state_int=\count165
-\l__regex_left_state_int=\count166
-\l__regex_right_state_int=\count167
-\l__regex_capturing_group_int=\count168
-\l__regex_min_pos_int=\count169
-\l__regex_max_pos_int=\count170
-\l__regex_curr_pos_int=\count171
-\l__regex_start_pos_int=\count172
-\l__regex_success_pos_int=\count173
-\l__regex_curr_char_int=\count174
-\l__regex_curr_catcode_int=\count175
-\l__regex_last_char_int=\count176
-\l__regex_case_changed_char_int=\count177
-\l__regex_curr_state_int=\count178
-\l__regex_step_int=\count179
-\l__regex_min_active_int=\count180
-\l__regex_max_active_int=\count181
-\l__regex_replacement_csnames_int=\count182
-\l__regex_match_count_int=\count183
-\l__regex_min_submatch_int=\count184
-\l__regex_submatch_int=\count185
-\l__regex_zeroth_submatch_int=\count186
-\g__regex_trace_regex_int=\count187
+\c__kernel_randint_max_int=\count132
+\g__fp_array_int=\count133
+\l__fp_array_loop_int=\count134
+\l__sort_length_int=\count135
+\l__sort_min_int=\count136
+\l__sort_top_int=\count137
+\l__sort_max_int=\count138
+\l__sort_true_max_int=\count139
+\l__sort_block_int=\count140
+\l__sort_begin_int=\count141
+\l__sort_end_int=\count142
+\l__sort_A_int=\count143
+\l__sort_B_int=\count144
+\l__sort_C_int=\count145
+\l__tl_analysis_normal_int=\count146
+\l__tl_analysis_index_int=\count147
+\l__tl_analysis_nesting_int=\count148
+\l__tl_analysis_type_int=\count149
+\l__regex_internal_a_int=\count150
+\l__regex_internal_b_int=\count151
+\l__regex_internal_c_int=\count152
+\l__regex_balance_int=\count153
+\l__regex_group_level_int=\count154
+\l__regex_mode_int=\count155
+\c__regex_cs_in_class_mode_int=\count156
+\c__regex_cs_mode_int=\count157
+\l__regex_catcodes_int=\count158
+\l__regex_default_catcodes_int=\count159
+\c__regex_catcode_D_int=\count160
+\c__regex_catcode_S_int=\count161
+\c__regex_catcode_L_int=\count162
+\c__regex_catcode_O_int=\count163
+\c__regex_catcode_A_int=\count164
+\c__regex_all_catcodes_int=\count165
+\l__regex_show_lines_int=\count166
+\l__regex_min_state_int=\count167
+\l__regex_max_state_int=\count168
+\l__regex_left_state_int=\count169
+\l__regex_right_state_int=\count170
+\l__regex_capturing_group_int=\count171
+\l__regex_min_pos_int=\count172
+\l__regex_max_pos_int=\count173
+\l__regex_curr_pos_int=\count174
+\l__regex_start_pos_int=\count175
+\l__regex_success_pos_int=\count176
+\l__regex_curr_char_int=\count177
+\l__regex_curr_catcode_int=\count178
+\l__regex_last_char_int=\count179
+\l__regex_case_changed_char_int=\count180
+\l__regex_curr_state_int=\count181
+\l__regex_step_int=\count182
+\l__regex_min_active_int=\count183
+\l__regex_max_active_int=\count184
+\l__regex_replacement_csnames_int=\count185
+\l__regex_match_count_int=\count186
+\l__regex_min_submatch_int=\count187
+\l__regex_submatch_int=\count188
+\l__regex_zeroth_submatch_int=\count189
+\g__regex_trace_regex_int=\count190
 \c_empty_box=\box28
 \l_tmpa_box=\box29
 \l_tmpb_box=\box30
@@ -313,17 +315,19 @@ Package: expl3 2018-06-14 L3 programming layer (code)
 \l__coffin_top_corner_dim=\dimen150
 \l__coffin_scaled_total_height_dim=\dimen151
 \l__coffin_scaled_width_dim=\dimen152
+\l__seq_internal_a_int=\count191
+\l__seq_internal_b_int=\count192
 )
-(c:/texlive/2018/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
-File: l3xdvidpfmx.def 2018-06-14 v L3 Experimental driver: xdvipdfmx
-\g__driver_image_int=\count188
+(c:/texlive/2018/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2018-06-14 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count193
 ))
 Package: xparse 2018-05-12 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count189
-\g__xparse_grabber_int=\count190
-\l__xparse_m_args_int=\count191
-\l__xparse_mandatory_args_int=\count192
-\l__xparse_v_nesting_int=\count193
+\l__xparse_current_arg_int=\count194
+\g__xparse_grabber_int=\count195
+\l__xparse_m_args_int=\count196
+\l__xparse_mandatory_args_int=\count197
+\l__xparse_v_nesting_int=\count198
 )
 \widthInit=\skip59
 .................................................
@@ -497,34 +501,33 @@ Package: xparse 2018-05-12 L3 Experimental document command parser
 .................................................
 )
 (c:/texlive/2018/texmf-dist/tex/latex/algorithms/algorithm.sty
-Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
 (c:/texlive/2018/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count194
+\c@float@type=\count199
 \float@exts=\toks26
 \float@box=\box43
 \@float@everytoks=\toks27
 \@floatcapt=\box44
 )
 \@float@every@algorithm=\toks28
-\c@algorithm=\count195
+\c@algorithm=\count266
 )
 (c:/texlive/2018/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count196
-\c@ALG@rem=\count197
-\c@ALG@nested=\count198
+\c@ALG@line=\count267
+\c@ALG@rem=\count268
+\c@ALG@nested=\count269
 \ALG@tlm=\skip60
 \ALG@thistlm=\skip61
-\c@ALG@Lnr=\count199
-\c@ALG@blocknr=\count266
-\c@ALG@storecount=\count267
-\c@ALG@tmpcounter=\count268
+\c@ALG@Lnr=\count270
+\c@ALG@blocknr=\count271
+\c@ALG@storecount=\count272
+\c@ALG@tmpcounter=\count273
 \ALG@tmplength=\skip62
 ) (c:/texlive/2018/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
@@ -542,10 +545,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (c:/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: xetex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(c:/texlive/2018/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+(c:/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen153
 \Gin@req@width=\dimen154
@@ -592,33 +595,28 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \pgf@yc=\dimen164
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count269
-\c@pgf@countb=\count270
-\c@pgf@countc=\count271
-\c@pgf@countd=\count272
+\c@pgf@counta=\count274
+\c@pgf@countb=\count275
+\c@pgf@countc=\count276
+\c@pgf@countd=\count277
 \t@pgf@toka=\toks33
 \t@pgf@tokb=\toks34
 \t@pgf@tokc=\toks35
  (c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-xetex.def
+Driver file for pgf: pgfsys-pdftex.def
 
-(c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
-File: pgfsys-xetex.def 2014/07/09  (rcs-revision 1.11)
-
-(c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
-File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
-)
-\pgfsys@objnum=\count273
 )))
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count274
-\pgfsyssoftpath@bigbuffer@items=\count275
+\pgfsyssoftpath@smallbuffer@items=\count278
+\pgfsyssoftpath@bigbuffer@items=\count279
 )
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -628,8 +626,9 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (c:/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -646,7 +645,7 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen165
-\pgfmath@count=\count276
+\pgfmath@count=\count280
 \pgfmath@box=\box46
 \pgfmath@toks=\toks36
 \pgfmath@stack@operand=\toks37
@@ -670,7 +669,7 @@ x)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
 etics.code.tex)))
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count277
+\c@pgfmathroundto@lastzeros=\count281
 ))
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
@@ -706,7 +705,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box47
 \pgf@hbox=\box48
 \pgf@layerbox@main=\box49
-\pgf@picture@serial@count=\count278
+\pgf@picture@serial@count=\count282
 )
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
 .tex
@@ -737,7 +736,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen189
-\pgf@sys@shading@range@num=\count279
+\pgf@sys@shading@range@num=\count283
 )
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -792,7 +791,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
 de.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count280
+\pgf@plot@mark@count=\count284
 \pgfplotmarksize=\dimen194
 )
 \tikz@lastx=\dimen195
@@ -805,18 +804,18 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box53
 \tikz@tempbox=\box54
 \tikz@tempbox@bg=\box55
-\tikztreelevel=\count281
-\tikznumberofchildren=\count282
-\tikznumberofcurrentchild=\count283
-\tikz@fig@count=\count284
+\tikztreelevel=\count285
+\tikznumberofchildren=\count286
+\tikznumberofcurrentchild=\count287
+\tikz@fig@count=\count288
 
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count285
-\pgfmatrixcurrentcolumn=\count286
-\pgf@matrix@numberofcolumns=\count287
+\pgfmatrixcurrentrow=\count289
+\pgfmatrixcurrentcolumn=\count290
+\pgf@matrix@numberofcolumns=\count291
 )
-\tikz@expandcount=\count288
+\tikz@expandcount=\count292
 
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarytopaths.code.tex
@@ -830,10 +829,10 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigbottomskip=\skip65
 \subfigcapmargin=\dimen258
 \subfiglabelskip=\skip66
-\c@subfigure=\count289
-\c@lofdepth=\count290
-\c@subtable=\count291
-\c@lotdepth=\count292
+\c@subfigure=\count293
+\c@lofdepth=\count294
+\c@subtable=\count295
+\c@lotdepth=\count296
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -847,7 +846,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip69
 \bibsep=\skip70
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count293
+\c@NAT@ctr=\count297
 ) (./report.aux)
 \openout1 = `report.aux'.
 
@@ -859,13 +858,80 @@ LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 
+(c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count298
+\scratchdimen=\dimen259
+\scratchbox=\box56
+\nofMPsegments=\count299
+\nofMParguments=\count300
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count301
+\MPscratchDim=\dimen260
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
+\everyMPtoPDFconversion=\toks42
+) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(c:/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(c:/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 ABD: EveryShipout initializing macros
 LaTeX Font Info:    Try loading font information for U+msa on input line 71.
 
@@ -893,153 +959,210 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
 [1
 
-]
+{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
-Package natbib Warning: Citation `chen2013combinatorial' on page 2 undefined on
- input line 102.
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 224--226
+Underfull \hbox (badness 10000) in paragraph at lines 227--229
 
- []
-
-File: spanning-cost-regret-uni.png Graphic file (type bmp)
-<spanning-cost-regret-uni.png>
-File: spanning-mean-regret-uni.png Graphic file (type bmp)
-<spanning-mean-regret-uni.png>
-
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 240--248
-[]$[]$ $[]$ 
  []
 
 [5]
-File: spanning-cost-regret-weibull08.png Graphic file (type bmp)
-<spanning-cost-regret-weibull08.png>
-File: spanning-mean-regret-weibull08.png Graphic file (type bmp)
-<spanning-mean-regret-weibull08.png>
+<spanning-cost-regret-uni.png, id=37, 462.528pt x 344.0052pt>
+File: spanning-cost-regret-uni.png Graphic file (type png)
+<use spanning-cost-regret-uni.png>
+Package pdftex.def Info: spanning-cost-regret-uni.png  used on input line 245.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
+<spanning-mean-regret-uni.png, id=39, 462.528pt x 344.0052pt>
+File: spanning-mean-regret-uni.png Graphic file (type png)
+<use spanning-mean-regret-uni.png>
+Package pdftex.def Info: spanning-mean-regret-uni.png  used on input line 249.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 253--261
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 243--251
 []$[]$ $[]$ 
  []
 
-File: simple-cost-regret-uni.png Graphic file (type bmp)
-<simple-cost-regret-uni.png>
-File: simple-mean-regret-uni.png Graphic file (type bmp)
-<simple-mean-regret-uni.png>
+<spanning-cost-regret-weibull08.png, id=40, 462.528pt x 344.0052pt>
+File: spanning-cost-regret-weibull08.png Graphic file (type png)
+<use spanning-cost-regret-weibull08.png>
+Package pdftex.def Info: spanning-cost-regret-weibull08.png  used on input line
+ 258.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
+<spanning-mean-regret-weibull08.png, id=41, 462.528pt x 344.0052pt>
+File: spanning-mean-regret-weibull08.png Graphic file (type png)
+<use spanning-mean-regret-weibull08.png>
+Package pdftex.def Info: spanning-mean-regret-weibull08.png  used on input line
+ 262.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 271--279
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 256--264
 []$[]$ $[]$ 
  []
 
-File: simple-cost-regret-weibull2.png Graphic file (type bmp)
-<simple-cost-regret-weibull2.png>
-File: simple-mean-regret-weibull2.png Graphic file (type bmp)
-<simple-mean-regret-weibull2.png>
+[6 <./spanning-cost-regret-uni.png> <./spanning-mean-regret-uni.png> <./spannin
+g-cost-regret-weibull08.png> <./spanning-mean-regret-weibull08.png>]
+<simple-cost-regret-uni.png, id=49, 462.528pt x 344.0052pt>
+File: simple-cost-regret-uni.png Graphic file (type png)
+<use simple-cost-regret-uni.png>
+Package pdftex.def Info: simple-cost-regret-uni.png  used on input line 276.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
+<simple-mean-regret-uni.png, id=50, 462.528pt x 344.0052pt>
+File: simple-mean-regret-uni.png Graphic file (type png)
+<use simple-mean-regret-uni.png>
+Package pdftex.def Info: simple-mean-regret-uni.png  used on input line 280.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 284--292
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 274--282
 []$[]$ $[]$ 
  []
 
-File: simple-cost-regret-weibull07.png Graphic file (type bmp)
-<simple-cost-regret-weibull07.png>
-File: simple-mean-regret-weibull07.png Graphic file (type bmp)
-<simple-mean-regret-weibull07.png>
+<simple-cost-regret-weibull2.png, id=51, 462.528pt x 344.0052pt>
+File: simple-cost-regret-weibull2.png Graphic file (type png)
+<use simple-cost-regret-weibull2.png>
+Package pdftex.def Info: simple-cost-regret-weibull2.png  used on input line 28
+9.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
+<simple-mean-regret-weibull2.png, id=52, 462.528pt x 344.0052pt>
+File: simple-mean-regret-weibull2.png Graphic file (type png)
+<use simple-mean-regret-weibull2.png>
+Package pdftex.def Info: simple-mean-regret-weibull2.png  used on input line 29
+3.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 297--305
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 287--295
 []$[]$ $[]$ 
  []
 
-[6] [7]
-File: general-cost-regret-uni.png Graphic file (type bmp)
-<general-cost-regret-uni.png>
-File: general-mean-regret-uni.png Graphic file (type bmp)
-<general-mean-regret-uni.png>
+<simple-cost-regret-weibull07.png, id=53, 462.528pt x 344.0052pt>
+File: simple-cost-regret-weibull07.png Graphic file (type png)
+<use simple-cost-regret-weibull07.png>
+Package pdftex.def Info: simple-cost-regret-weibull07.png  used on input line 3
+02.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
+<simple-mean-regret-weibull07.png, id=54, 462.528pt x 344.0052pt>
+File: simple-mean-regret-weibull07.png Graphic file (type png)
+<use simple-mean-regret-weibull07.png>
+Package pdftex.def Info: simple-mean-regret-weibull07.png  used on input line 3
+06.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 314--322
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 300--308
+[]$[]$ $[]$ 
+ []
+
+<general-cost-regret-uni.png, id=55, 462.528pt x 344.0052pt>
+File: general-cost-regret-uni.png Graphic file (type png)
+<use general-cost-regret-uni.png>
+Package pdftex.def Info: general-cost-regret-uni.png  used on input line 319.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
+<general-mean-regret-uni.png, id=56, 462.528pt x 344.0052pt>
+File: general-mean-regret-uni.png Graphic file (type png)
+<use general-mean-regret-uni.png>
+Package pdftex.def Info: general-mean-regret-uni.png  used on input line 323.
+(pdftex.def)             Requested size: 216.81pt x 161.25203pt.
+
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 317--325
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
+[7 <./simple-cost-regret-uni.png> <./simple-mean-regret-uni.png> <./simple-cost
+-regret-weibull2.png> <./simple-mean-regret-weibull2.png>] [8 <./simple-cost-re
+gret-weibull07.png> <./simple-mean-regret-weibull07.png> <./general-cost-regret
+-uni.png> <./general-mean-regret-uni.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
-
-Package natbib Warning: Citation `chen2013combinatorial' on page 8 undefined on
- input line 334.
-
-[8] (./report.bbl)
-
-Package natbib Warning: There were undefined citations.
-
-[9] (./report.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
+[9] (./report.bbl
+Underfull \hbox (badness 1845) in paragraph at lines 50--56
+[]\OT1/cmr/m/n/10 T.L Lai and Her-bert Rob-bins.  Asymp-tot-i-cally ef-fi-cient
+ adap-tive al-lo-ca-tion rules.  \OT1/cmr/m/it/10 Adv. Appl.
+ []
 
 
-./report.aux:50: Package natbib Error: Bibliography not compatible with author-
-year citations.
-(natbib)                Press <return> to continue in numerical citation style.
+Underfull \hbox (badness 1675) in paragraph at lines 50--56
+\OT1/cmr/m/it/10 Math.\OT1/cmr/m/n/10 , 6(1):4--22, March 1985.  ISSN 0196-8858
+.  doi: 10.1016/0196-8858(85)90002-8.  URL
+ []
 
 
-See the natbib package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 ...mand\NAT@force@numbers{}\NAT@force@numbers
-                                                  
-Check the bibliography entries for non-compliant syntax,
-or select author-year BibTeX style, e.g. plainnat
+Underfull \hbox (badness 1231) in paragraph at lines 58--64
+\OT1/cmr/m/n/10 of the ev-i-dence of two sam-ples.  \OT1/cmr/m/it/10 Biometrika
+\OT1/cmr/m/n/10 , 25(3/4):285--294, 1933.  ISSN 00063444.  URL
+ []
 
-) ) 
+) [10] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 22806 strings out of 492969
- 443868 string characters out of 6137283
- 467843 words of memory out of 5000000
- 26500 multiletter control sequences out of 15000+600000
- 538794 words of font info for 64 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 55i,6n,54p,827b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23697 strings out of 492646
+ 456666 string characters out of 6133325
+ 484284 words of memory out of 5000000
+ 27246 multiletter control sequences out of 15000+600000
+ 541630 words of font info for 60 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,8n,65p,859b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2018/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2018/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2018/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb>
+Output written on report.pdf (10 pages, 497163 bytes).
+PDF statistics:
+ 133 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on report.pdf (9 pages).

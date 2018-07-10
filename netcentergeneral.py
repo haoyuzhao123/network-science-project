@@ -191,7 +191,7 @@ class Simulator:
                 #e.lastvalue = e.weight
                 # set the confidence bound
                 if e.visit != 0:
-                    e.lowerconfidence = e.empmean - 1 * np.sqrt(3 * np.log(self.counter) / (2 * e.visit))
+                    e.lowerconfidence = e.empmean - e.empmean * np.sqrt(3 * np.log(self.counter) / (2 * e.visit))
                 else:
                     e.lowerconfidence = 0.1
 

@@ -87,7 +87,7 @@
 
     \subsection{Hardness of the Problem}
     \subsubsection{Exploration vs. Exploitation}
-    How to balance the exploration and exploitation is a general problem in the online learning, and especially the multi-armed bandit field. To get more accurate estimation of each random variable, we should observe that random variable for as more time as possible. However, if we choose the random variable that is `bad' ,i.e. it may cost a lot to choose that variable, we should not observe that random variable. So there is a seemingly contradiction between the exploration and exploitation, and we should balance these 2 aspect.
+    How to balance the exploration and exploitation is a general problem in the online learning, and especially the multi-armed bandit field. To get more accurate estimation of each random variable, we should observe that random variable for as more time as possible. However, if we choose the random variable that is `bad' ,i.e. it may cost a lot to choose that variable, we should not observe that random variable. So there is a seemingly contradiction between the exploration and exploitation, and we should balance these 2 aspects.
 
     \subsubsection{Exponential Number of Feasible Action}
     Given a graph with $n$ edges, we can have $2^n$ number of possible actions, although some of them violate the constraints. Then just consider the spanning tree of a complete graph, the number of spanning trees is also exponential compared with the number of edges. So given the time horizon of our repeated online information synchronization problem, we may not try each feasible action once.
@@ -96,10 +96,13 @@
     Different kinds of measurements of the information synchronization also lead to a challenge of the problem. Because when we want to optimize the objective function under different measurements, such as cost, time or a combination of them, we will often lead to different algorithm and models. So it may hard to combine different kind of model under a general framework and get theoretical guarantee of the algorithm performance.
 
     \subsection{Related Works}
+    Online learning and multi-armed bandit is an old topic which has much result in this field. \citet{Thompson:10.2307/2332286} first formulize the multi-armed bandit problem. Our problem is related to a branch named stochastic multi-armed bandit. The stochastic MAB is just the problem to study the tradeoff between exploration and exploitation, and there are many results toward this topic. To deal with the tradeoff between exploration and exploitation, \citet{Lai:1985:AEA:2609660.2609757} introduced the famous upper confidence bound, which gives a way to deal with the tradeoff between exploration and exploitation. \citet{Agrawal1995} analysis the above strategy and get a result of $O(\log n)$ regret bound, and \citet{Auer:2002:FAM:599614.599677} analysis the previous strategy with bounded random variable.\\
+
+    To deal with the problem of exponential number of arms in the multi-armed bandit, \citet{pmlr-v28-chen13a} generalize the original stochastic MAB problem as the combinatorial multi-armed bandit problem. In that paper, the authors give an algorithm that generalize the upper-confidence bound strategy, called combinatorial upper-confidence bound to deal with the exponential number of bounds. \citet{DBLP:journals/corr/ChenWY14a} extend the combinatorial MAB problem into the probabilistic triggered arm case and \citet{Chen:2014:CPE:2968826.2968869} study the combinatorial pure exploration problem. However, these work make the assumption that the random variables are bounded(mostly with support $[0,1]$) and the cost function just depend on the mean of each random variable.
 
     \section{Methods to Solve the Problem}
     \subsection{General Methods}
-    To tackle the problem of the unknown distribution of the edges, we apply the framework in multi-arm bandit. However, in the network information syncronization setting, the number of possible result will be exponentially large with respect to the number of nodes. Fortunately, \cite{chen2013combinatorial} gave a framework of combinatorial multi-armed bandit to deal with the problem of exponentially number of `arms'. We apply the framework, and the algorithm in that framework, and combine it with the network information synchronization problem. The algorithm is shown in \textbf{Algorithm \ref{cucb}}
+    To tackle the problem of the unknown distribution of the edges, we apply the framework in multi-arm bandit. However, in the network information syncronization setting, the number of possible result will be exponentially large with respect to the number of nodes. Fortunately, \citet{pmlr-v28-chen13a} gave a framework of combinatorial multi-armed bandit to deal with the problem of exponentially number of `arms' when the random variables have support $[0,1]$. We apply the algorithm in that framework, and combine it with the network information synchronization problem when we do not add assumption to the random variables. The algorithm is shown in \textbf{Algorithm \ref{cucb}}
 
     \begin{algorithm}
         \caption{Algorithm to solve the online information syncronization problem}
@@ -331,10 +334,10 @@
     Moreover, we can find that the speed of convergence are differnet. When the distrubution has larger variance or the random variable is long tail, the speed of convergence is slow.
 
     \section{Conclusion}
-    In this report, we study the online information synchronization problem, with known weight of the communication graph. We apply the framework in \cite{chen2013combinatorial} and let it fit our problem settings. We study the problem from $2$ different aspect, one from the minimum cost, and the other from the minimum time spent during the synchronization process. In the minimum cost version, we show that our method can tackle this problem successfully by simulation. However under the minimum time spent setting, our algorithm can successfully solve the problem when the random variables are constant and can only get a approximate solution of the general case.
+    In this report, we study the online information synchronization problem, with known weight of the communication graph. We apply the framework in \citet{pmlr-v28-chen13a} and let it fit our problem settings. We study the problem from $2$ different aspect, one from the minimum cost, and the other from the minimum time spent during the synchronization process. In the minimum cost version, we show that our method can tackle this problem successfully by simulation. However under the minimum time spent setting, our algorithm can successfully solve the problem when the random variables are constant and can only get a approximate solution of the general case.
 
     \newpage
-    \bibliographystyle{ieeetr}
+    \bibliographystyle{plainnat}
     \bibliography{mybib}
 
     
