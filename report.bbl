@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,13 @@ Rajeev Agrawal.
 \newblock Sample mean based index policies with o(log n) regret for the
   multi-armed bandit problem.
 \newblock 27, 12 1995.
+
+\bibitem[Ahn and Ramakrishna(2002)]{ahn2002genetic}
+Chang~Wook Ahn and Rudrapatna~S Ramakrishna.
+\newblock A genetic algorithm for shortest path routing problem and the sizing
+  of populations.
+\newblock \emph{IEEE transactions on evolutionary computation}, 6\penalty0
+  (6):\penalty0 566--579, 2002.
 
 \bibitem[Auer et~al.(2002)Auer, Cesa-Bianchi, and
   Fischer]{Auer:2002:FAM:599614.599677}
@@ -46,6 +53,21 @@ Wei Chen, Yajun Wang, and Yang Yuan.
 \newblock \emph{CoRR}, abs/1407.8339, 2014{\natexlab{b}}.
 \newblock URL \url{http://arxiv.org/abs/1407.8339}.
 
+\bibitem[Christofides et~al.(1981)Christofides, Mingozzi, and
+  Toth]{christofides1981exact}
+Nicos Christofides, Aristide Mingozzi, and Paolo Toth.
+\newblock Exact algorithms for the vehicle routing problem, based on spanning
+  tree and shortest path relaxations.
+\newblock \emph{Mathematical programming}, 20\penalty0 (1):\penalty0 255--282,
+  1981.
+
+\bibitem[Huang et~al.(2006)Huang, Li, and He]{huang2006dynamic}
+Guangyan Huang, Xiaowei Li, and Jing He.
+\newblock Dynamic minimal spanning tree routing protocol for large wireless
+  sensor networks.
+\newblock In \emph{Industrial Electronics and Applications, 2006 1ST IEEE
+  Conference on}, pages 1--5. IEEE, 2006.
+
 \bibitem[Lai and Robbins(1985)]{Lai:1985:AEA:2609660.2609757}
 T.L Lai and Herbert Robbins.
 \newblock Asymptotically efficient adaptive allocation rules.
@@ -61,5 +83,18 @@ William~R. Thompson.
 \newblock \emph{Biometrika}, 25\penalty0 (3/4):\penalty0 285--294, 1933.
 \newblock ISSN 00063444.
 \newblock URL \url{http://www.jstor.org/stable/2332286}.
+
+\bibitem[Wang and Crowcroft(1992)]{wang1992analysis}
+Zheng Wang and Jon Crowcroft.
+\newblock Analysis of shortest-path routing algorithms in a dynamic network
+  environment.
+\newblock \emph{ACM SIGCOMM Computer Communication Review}, 22\penalty0
+  (2):\penalty0 63--71, 1992.
+
+\bibitem[Waxman(1988)]{waxman1988routing}
+Bernard~M Waxman.
+\newblock Routing of multipoint connections.
+\newblock \emph{IEEE journal on selected areas in communications}, 6\penalty0
+  (9):\penalty0 1617--1622, 1988.
 
 \end{thebibliography}

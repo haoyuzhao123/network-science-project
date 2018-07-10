@@ -3,52 +3,47 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: report.aux
 The style file: plainnat.bst
 Database file #1: mybib.bib
-Illegal end of database file---line 220 of file mybib.bib
- : 
- : 
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--empty journal in Agrawal1995
 Warning--can't use both volume and number fields in pmlr-v28-chen13a
-You've used 7 entries,
+You've used 12 entries,
             2773 wiz_defined-function locations,
-            669 strings with 6793 characters,
-and the built_in function-call counts, 3679 in all, are:
-= -- 356
-> -- 187
-< -- 6
-+ -- 64
-- -- 56
-* -- 319
-:= -- 565
-add.period$ -- 34
-call.type$ -- 7
-change.case$ -- 39
-chr.to.int$ -- 6
-cite$ -- 16
-duplicate$ -- 167
-empty$ -- 286
-format.name$ -- 65
-if$ -- 776
+            704 strings with 7745 characters,
+and the built_in function-call counts, 6048 in all, are:
+= -- 581
+> -- 299
+< -- 10
++ -- 102
+- -- 89
+* -- 513
+:= -- 917
+add.period$ -- 50
+call.type$ -- 12
+change.case$ -- 65
+chr.to.int$ -- 11
+cite$ -- 26
+duplicate$ -- 277
+empty$ -- 495
+format.name$ -- 107
+if$ -- 1280
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 7
-newline$ -- 54
-num.names$ -- 30
-pop$ -- 61
+missing$ -- 12
+newline$ -- 79
+num.names$ -- 50
+pop$ -- 109
 preamble$ -- 1
-purify$ -- 32
+purify$ -- 53
 quote$ -- 0
-skip$ -- 124
+skip$ -- 204
 stack$ -- 0
-substring$ -- 144
-swap$ -- 33
-text.length$ -- 3
+substring$ -- 270
+swap$ -- 44
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 77
+type$ -- 132
 warning$ -- 2
-while$ -- 34
+while$ -- 60
 width$ -- 0
-write$ -- 125
-(There was 1 error message)
+write$ -- 191
+(There were 2 warnings)

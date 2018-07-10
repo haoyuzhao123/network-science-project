@@ -96,13 +96,15 @@
     Different kinds of measurements of the information synchronization also lead to a challenge of the problem. Because when we want to optimize the objective function under different measurements, such as cost, time or a combination of them, we will often lead to different algorithm and models. So it may hard to combine different kind of model under a general framework and get theoretical guarantee of the algorithm performance.
 
     \subsection{Related Works}
-    Online learning and multi-armed bandit is an old topic which has much result in this field. \citet{Thompson:10.2307/2332286} first formulize the multi-armed bandit problem. Our problem is related to a branch named stochastic multi-armed bandit. The stochastic MAB is just the problem to study the tradeoff between exploration and exploitation, and there are many results toward this topic. To deal with the tradeoff between exploration and exploitation, \citet{Lai:1985:AEA:2609660.2609757} introduced the famous upper confidence bound, which gives a way to deal with the tradeoff between exploration and exploitation. \citet{Agrawal1995} analysis the above strategy and get a result of $O(\log n)$ regret bound, and \citet{Auer:2002:FAM:599614.599677} analysis the previous strategy with bounded random variable.\\
+    Online learning and multi-armed bandit is an old topic which has much result in this field. \citet{Thompson:10.2307/2332286} first formulize the multi-armed bandit problem. Our problem is related to a branch named stochastic multi-armed bandit. The stochastic MAB is just the problem to study the tradeoff between exploration and exploitation, and there are many results toward this topic. To deal with the tradeoff between exploration and exploitation, \citet{Lai:1985:AEA:2609660.2609757} introduced the famous upper confidence bound, balance the ratio between exploration and exploitation. \citet{Agrawal1995} analysis the above strategy and get a result of $O(\log n)$ regret bound, and \citet{Auer:2002:FAM:599614.599677} analysis the previous strategy with bounded random variable.\\
 
-    To deal with the problem of exponential number of arms in the multi-armed bandit, \citet{pmlr-v28-chen13a} generalize the original stochastic MAB problem as the combinatorial multi-armed bandit problem. In that paper, the authors give an algorithm that generalize the upper-confidence bound strategy, called combinatorial upper-confidence bound to deal with the exponential number of bounds. \citet{DBLP:journals/corr/ChenWY14a} extend the combinatorial MAB problem into the probabilistic triggered arm case and \citet{Chen:2014:CPE:2968826.2968869} study the combinatorial pure exploration problem. However, these work make the assumption that the random variables are bounded(mostly with support $[0,1]$) and the cost function just depend on the mean of each random variable.
+    To deal with the problem of exponential number of arms in the multi-armed bandit, \citet{pmlr-v28-chen13a} generalize the original stochastic MAB problem as the combinatorial multi-armed bandit problem. In that paper, the authors give an algorithm that generalize the upper-confidence bound strategy, called combinatorial upper-confidence bound to deal with the exponential number of bounds. \citet{DBLP:journals/corr/ChenWY14a} extend the combinatorial MAB problem into the probabilistic triggered arm case and \citet{Chen:2014:CPE:2968826.2968869} study the combinatorial pure exploration problem. However, these work make the assumption that the random variables are bounded(mostly with support $[0,1]$) and the cost function just depend on the mean of each random variable.\\
+
+    As for the information synchronization problem, we just use a number to represent the information, so it can be viewed as a combinatorial problem and our information synchronization model is much related to the packet routing problem. The most simple routing scheme is the shortest path routing, which is studied in \citet{ahn2002genetic,wang1992analysis}. However, finding the all pair shortest path may use many edges and it may not be reasonable when the edges have cost. So in this project, we focus on another routing mechanism named spanning tree routing. In the spanning tree routing, \citet{huang2006dynamic} studies the minimum spanning tree scheme and \citet{christofides1981exact} studies the centering problem and the relaxation of shortest path problem. These works enlight us to dive deeper into the spanning tree mechanism. Moreover, \cite{waxman1988routing} studied the multi-point connection routing. 
 
     \section{Methods to Solve the Problem}
     \subsection{General Methods}
-    To tackle the problem of the unknown distribution of the edges, we apply the framework in multi-arm bandit. However, in the network information syncronization setting, the number of possible result will be exponentially large with respect to the number of nodes. Fortunately, \citet{pmlr-v28-chen13a} gave a framework of combinatorial multi-armed bandit to deal with the problem of exponentially number of `arms' when the random variables have support $[0,1]$. We apply the algorithm in that framework, and combine it with the network information synchronization problem when we do not add assumption to the random variables. The algorithm is shown in \textbf{Algorithm \ref{cucb}}
+    To tackle the problem of the unknown distribution of the edges, we apply the framework in multi-arm bandit. However, in the network information syncronization setting, the number of possible result will be exponentially large with respect to the number of nodes. Fortunately, \citet{pmlr-v28-chen13a} gave a framework of combinatorial multi-armed bandit to deal with the problem of exponentially number of `arms' when the random variables have support $[0,1]$. We apply the algorithm in that framework, modify the algorithm to let it fit the unbounded case, which use the empirical mean as a parameter to adjust the `exploration rate', and combine it with the network information synchronization problem when we do not add assumption to the random variables. The algorithm is shown in \textbf{Algorithm \ref{cucb}}
 
     \begin{algorithm}
         \caption{Algorithm to solve the online information syncronization problem}
@@ -118,7 +120,7 @@
                 \State Play an instance from all possible instances which contains the egde $i$.
             \EndFor
             \For{$t=|E|+1,\dots$}
-                \State $\bar\mu_i \leftarrow \hat\mu_i - \sqrt{\frac{3\ln t}{2T_i}}$.
+                \State $\bar\mu_i \leftarrow \hat\mu_i - \hat\mu_i\cdot\sqrt{\frac{3\ln t}{2T_i}}$. \Comment{Change the exploration rate by empirical mean.}
                 \State Play an instance which minimize the result of algorithm $\mathcal A$ when each edge has weight $\bar\mu_i$.
             \EndFor
         \EndProcedure
@@ -153,7 +155,7 @@
                 \State Find an arbitrary spanning tree that contains edge $t$.
             \EndFor
             \For{$t=|E|+1,\dots$}
-                \State $\bar\mu_i \leftarrow \hat\mu_i - \sqrt{\frac{3\ln t}{2T_i}}$.
+                \State $\bar\mu_i \leftarrow \hat\mu_i - \hat\mu_i\cdot\sqrt{\frac{3\ln t}{2T_i}}$.
                 \State Find the minimum spanning tree with $\bar\mu_i$ as the weight on edge $i$.
             \EndFor
         \EndProcedure
@@ -214,7 +216,7 @@
                 \State Find an arbitrary spanning tree that contains edge $t$.
             \EndFor
             \For{$t=|E|+1,\dots$}
-                \State $\bar\mu_i \leftarrow \hat\mu_i - \sqrt{\frac{3\ln t}{2T_i}}$.
+                \State $\bar\mu_i \leftarrow \hat\mu_i - \hat\mu_i\cdot\sqrt{\frac{3\ln t}{2T_i}}$.
                 \State Find the center of the graph $G$ and the corresponding shortest path tree rooted at the center with $\bar\mu_i$ as the weight on edge $i$.
             \EndFor
         \EndProcedure
@@ -268,7 +270,9 @@
     \subsection{Minimize the Maximum Distance}
     \subsubsection{The case when the time is constant but unknown}
 
-    We test the result of our method on a complete graph with 20 nodes. We test the situation when the weight random variable of each edge is a uniform random variable, and the results are shown in \textbf{Figure \ref{center-uni}}. We also simulate the case when the random variable of weight on each edge is $m_i\cdot x_i$ where $m_i,x_i$ are standard Weibull distribution with shape parameter $2$ and $0.7$, and the results are shown in \textbf{Figure \ref{center-weibull2},Figure \ref{center-weibull07}}.
+    We test the result of our method on a complete graph with 20 nodes. We test the situation when the weight random variable of each edge is a uniform random variable, and the results are shown in \textbf{Figure \ref{center-uni}}. We also simulate the case when the random variable of weight on each edge is $m_i\cdot x_i$ where $m_i,x_i$ are standard Weibull distribution with shape parameter $2$ and $0.7$, and the results are shown in \textbf{Figure \ref{center-weibull2},Figure \ref{center-weibull07}}.\\
+    
+    We also compare our algorithm with the original algorithm in \citet{pmlr-v28-chen13a} with Weibull distribution with parameter $2$ and $0.7$, which are showwn in \textbf{Figure \ref{center-weibull2-ori,center-weibull07-ori}}
 
     \begin{figure}[htbp!]
         \begin{minipage}[h]{0.5\linewidth}
@@ -286,14 +290,40 @@
     \begin{figure}[htbp!]
         \begin{minipage}[h]{0.5\linewidth}
             \centering
+            \includegraphics[width=3in]{simple-cost-regret-weibull2-new.png}
+        \end{minipage}
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{simple-mean-regret-weibull2-new.png}
+        \end{minipage}
+        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is random variable $m_i \cdot x_i$, where $m_i,x_i$ are standard Weibull distrubution with parameter $2$. The left figure and the right figure shows the same things as in the previous figure.}
+        \label{center-weibull2}
+    \end{figure}
+
+    \begin{figure}[htbp!]
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{simple-cost-regret-weibull07-new.png}
+        \end{minipage}
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
+            \includegraphics[width=3in]{simple-mean-regret-weibull07-new.png}
+        \end{minipage}
+        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is random variable $m_i \cdot x_i$, where $m_i,x_i$ are standard Weibull distrubution with parameter $0.7$. The left figure and the right figure shows the same things as in the previous figure.}
+        \label{center-weibull07}
+    \end{figure}
+
+    \begin{figure}[htbp!]
+        \begin{minipage}[h]{0.5\linewidth}
+            \centering
             \includegraphics[width=3in]{simple-cost-regret-weibull2.png}
         \end{minipage}
         \begin{minipage}[h]{0.5\linewidth}
             \centering
             \includegraphics[width=3in]{simple-mean-regret-weibull2.png}
         \end{minipage}
-        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is random variable $m_i \cdot x_i$, where $m_i,x_i$ are standard Weibull distrubution with parameter $2$. The left figure and the right figure shows the same things as in the previous figure.}
-        \label{center-weibull2}
+        \caption{The simulation result on original algorithm by \citet{pmlr-v28-chen13a} with Weibull $2$ distribution.}
+        \label{center-weibull2-ori}
     \end{figure}
 
     \begin{figure}[htbp!]
@@ -305,8 +335,8 @@
             \centering
             \includegraphics[width=3in]{simple-mean-regret-weibull07.png}
         \end{minipage}
-        \caption{The simulation result on a complete graph with 20 nodes. The weight of each edge is random variable $m_i \cdot x_i$, where $m_i,x_i$ are standard Weibull distrubution with parameter $0.7$. The left figure and the right figure shows the same things as in the previous figure.}
-        \label{center-weibull07}
+        \caption{The simulation result on original algorithm by \citet{pmlr-v28-chen13a} with Weibull $0.7$ distribution.}
+        \label{center-weibull07-ori}
     \end{figure}
 
     \subsubsection{The general case}
@@ -331,10 +361,12 @@
     
     But the simulation results shows that our algorithm may also approximate the `cheating' solution to some constant, which may depend on the graph topology and the distribution of the random variable. Then combine our previous argument that when the information transfer through the shortest path tree rooted at the center, the time is at most $2$ times of the optimal strategy. So we can say that our strategy can solve this general case approximately.\\
 
-    Moreover, we can find that the speed of convergence are differnet. When the distrubution has larger variance or the random variable is long tail, the speed of convergence is slow.
+    Moreover, we can find that the speed of convergence are differnet. When the distrubution has larger variance or the random variable is long tail, the speed of convergence is slow.\\
+
+    From the comparision with the original framework in \citet{pmlr-v28-chen13a}, we find that our algorithm converge faster in the case when the distribution is long tailed or have larger variance. We conjecture that this is due to the fact that we use the empirical mean as a coefficient to adjust the rate of `exploration', which will find the best action faster when the random variables have large variance.
 
     \section{Conclusion}
-    In this report, we study the online information synchronization problem, with known weight of the communication graph. We apply the framework in \citet{pmlr-v28-chen13a} and let it fit our problem settings. We study the problem from $2$ different aspect, one from the minimum cost, and the other from the minimum time spent during the synchronization process. In the minimum cost version, we show that our method can tackle this problem successfully by simulation. However under the minimum time spent setting, our algorithm can successfully solve the problem when the random variables are constant and can only get a approximate solution of the general case.
+    In this report, we study the online information synchronization problem, with known weight of the communication graph. We modify the framework in \citet{pmlr-v28-chen13a} and let it fit our problem settings. We study the problem from $2$ different aspect, one from the minimum cost, and the other from the minimum time spent during the synchronization process. In the minimum cost version, we show that our method can tackle this problem successfully by simulation. However under the minimum time spent setting, our algorithm can successfully solve the problem when the random variables are constant and can only get a approximate solution of the general case.
 
     \newpage
     \bibliographystyle{plainnat}
